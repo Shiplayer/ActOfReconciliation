@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ActReconciliation:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ActReconciliation_jar</output-path>
+    <root id="archive" name="ActReconciliation.jar">
+      <element id="module-output" name="ActReconciliation" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/poi-bin-3.17-20170915/poi-3.17/poi-3.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-test-sources.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
