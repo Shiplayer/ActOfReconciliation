@@ -13,15 +13,16 @@
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="303.0" />
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="109.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="468.0" minWidth="10.0" prefWidth="273.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="131.0" />
     </columnConstraints>
     <rowConstraints>
         <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
-        <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <VBox alignment="CENTER" prefHeight="329.0" prefWidth="170.0" GridPane.columnIndex="2">
+        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="122.0" GridPane.columnIndex="2">
             <children>
                 <Button mnemonicParsing="false" onMouseClicked="#openFileTheirDialogButton" text="Выбрать">
                     <VBox.margin>
@@ -63,12 +64,12 @@
                 <Insets left="5.0" right="5.0" />
             </GridPane.margin>
         </VBox>
-        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
             <children>
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#checkExcels" text="Сверить" />
             </children>
         </VBox>
-        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <children>
                 <Label fx:id="statusLabel" text="Статус:">
                     <VBox.margin>
@@ -81,5 +82,10 @@
                 <Insets left="5.0" right="5.0" />
             </GridPane.margin>
         </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Button mnemonicParsing="false" text="Поменять местами" onMouseClicked="#swapFiles"/>
+         </children>
+      </VBox>
     </children>
 </GridPane>

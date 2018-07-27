@@ -145,8 +145,10 @@ c1.setCellStyle(newStyle);
             if(removeList.size() == 0){
                 compareValue++;
                 Cell notFoundCell = deque.pollLast();
-                notFoundCell.setCellStyle(notFound);
-                System.out.println("not found, pollLast = " + getNumber(notFoundCell));
+                if(notFoundCell != null) {
+                    notFoundCell.setCellStyle(notFound);
+                    System.out.println("not found, pollLast = " + getNumber(notFoundCell));
+                }
             } else {
                 for (Cell buf : removeList)
                     deque.removeLastOccurrence(buf);

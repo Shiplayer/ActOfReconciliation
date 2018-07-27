@@ -73,9 +73,15 @@ public class Controller implements Initializable {
     @FXML
     public void checkExcels(MouseEvent mouseEvent){
         if(fileOurTextField.getText() != null && fileTheirTextField.getText() != null) {
+            if(progressCheck.getProgress() == 100.0)
+                progressCheck = new ProgressBar(0);
             System.out.println(excelOurFile.getAbsoluteFile());
+            if(progressCheck.progressProperty().isBound()){
+                progressCheck.progressProperty().unbind();
+            }
             Task task = createTask();
-            progressCheck.setProgress(0);
+            System.err.println(task.isDone());
+            //progressCheck.setProgress(0);
             progressCheck.progressProperty().unbind();
             progressCheck.progressProperty().bind(task.progressProperty());
             task.messageProperty().addListener(new ChangeListener<String>() {
@@ -88,10 +94,24 @@ public class Controller implements Initializable {
         }
     }
 
+    @FXML
+    public void swapFiles(MouseEvent mouseEvent){
+        if(fileOurTextField.getText() != null && fileTheirTextField.getText() != null){
+            String buf = fileOurTextField.getText();
+            fileOurTextField.setText(fileTheirTextField.getText());
+            fileTheirTextField.setText(buf);
+            if(!fileOurTextField.getText().isEmpty())
+                excelOurFile = new File(fileOurTextField.getText());
+            if(!fileTheirTextField.getText().isEmpty())
+                excelTheirFile = new File(fileTheirTextField.getText());
+        }
+    }
+
     public Task createTask(){
         return new Task() {
             @Override
             protected Object call() {
+                updateProgress(0, 100);
                 updateMessage("start");
                 ActOfReconciliation our = null, their = null;
                 try {
